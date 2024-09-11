@@ -132,8 +132,9 @@ button{
 .top-destinations {
 
     margin: 5% 0;
+    text-align: center;
+    padding: 50px 0;
 
-    
     p{
         margin: 0;
         font-weight: bold;
@@ -147,9 +148,6 @@ button{
         color: #181E4B;
     }
 
-    text-align: center;
-    padding: 50px 0;
-    background-color: white;
 }
 
 .destination-cards {
@@ -346,8 +344,7 @@ label {
 
 input[type="text"],
 input[type="email"] {
-    padding: 8px;
-    border: 1px solid #ccc;
+    background-color: white;
     border-radius: 4px;
     width: 100%;
 }
@@ -372,7 +369,7 @@ input.success {
 }
 
 .form-group {
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 
