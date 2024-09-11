@@ -281,12 +281,20 @@ button{
     background-position: center;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     button {
         padding: 10px;
         background-color: #4CAF50;
         color: white;
         border: none
+    }
+
+    #bluebullet {
+        position: absolute; /* Absolute positioning */
+        top: -30px; /* Align to the top */
+        right: -30px; /* Align to the right */
+        width: 70px; /* Adjust size as needed */
     }
 
     h2 {
