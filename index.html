@@ -133,7 +133,7 @@
 
     <div class="partners">
         <img src="assets/axon.png" alt="Axon">
-        <img src="assets/expedia.png" alt="Expedia">
+        <img src="assets/axon.png" alt="Expedia">
         <img src="assets/jetastar.png" alt="Jetstar">
         <img src="assets/qantas.png" alt="Qantas">
         <img src="assets/italy.png" alt="Alitalia">
@@ -144,19 +144,22 @@
         <h2>Subscribe to get information, latest news and other
             interesting offers about Jadoo</h2>
 
-        <form id="subscribeForm">
-            <div id="form-main"> 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <div id="nameError" class="error-message">Name is required</div>
-        
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <div id="emailError" class="error-message">Valid email is required</div>
+            <form id="subscribeForm" novalidate>
+                <button id="submit-form" type="submit">Submit</button>
 
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                <div id="form-main">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <div id="nameError" class="error-message">Name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your email">
+                        <div id="emailError" class="error-message">Valid email is required</div>
+                    </div>
+                </div>
+            </form>
+            
+            
     </div>
     
 
@@ -164,5 +167,6 @@
     <footer>
       
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>

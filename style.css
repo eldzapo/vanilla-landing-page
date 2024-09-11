@@ -267,11 +267,6 @@ button{
     padding: 20px 0;
 }
 
-footer .partners img {
-    margin: 0 15px;
-    width: 100px;
-}
-
 .form-container {
     background-image: url('./assets/form.png');
     background-size: cover; 
@@ -295,6 +290,19 @@ footer .partners img {
         color: white;
         border: none
     }
+
+    h2 {
+        color: #5E6282;
+        font-size: 33px;
+        font-weight: 600;
+        width: 50%;
+        text-align: center;
+    }
+
+    input {
+        border: none;
+        padding: 5% 10%;
+    }
 }
 
 form {
@@ -303,15 +311,37 @@ form {
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
+    align-items: center;
 }
 
 #form-main {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    input {
+        border: none;
+        padding: 15px 40px;
+        width: 200px;
+    }
 }
+
+#email {
+    margin-left: 20px;
+}
+
 
 label {
     font-weight: bold;
+}
+
+
+#submit-form {
+    padding: 30px;
+    background-color: #ff6600;
+    color: white;
+    width: 300px;
+    justify-content: center;
 }
 
 input[type="text"],
@@ -324,8 +354,8 @@ input[type="email"] {
 
 .error-message {
     color: red;
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 0.875em;  
+    margin-top: 5px; 
     display: none;
 }
 
@@ -336,3 +366,13 @@ input.error {
 input.success {
     border: 2px solid green;
 }
+
+.error-border {
+    border: 2px solid red;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+

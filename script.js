@@ -1,49 +1,39 @@
 document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-
-    clearErrors();
+    event.preventDefault();  
 
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+
+    nameError.style.display = 'none';
+    emailError.style.display = 'none';
+    nameInput.classList.remove('error-border');
+    emailInput.classList.remove('error-border');
 
     let isValid = true;
 
     if (nameInput.value.trim() === '') {
+        nameError.style.display = 'block'; 
+        nameInput.classList.add('error-border');
         isValid = false;
-        displayError(nameInput, 'nameError', 'Name is required');
-    } else {
-        nameInput.classList.add('success');
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(emailInput.value)) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+        emailError.style.display = 'block';
+        emailInput.classList.add('error-border'); 
         isValid = false;
-        displayError(emailInput, 'emailError', 'Valid email is required');
-    } else {
-        emailInput.classList.add('success');
     }
+
 
     if (isValid) {
-        console.log("Name:", nameInput.value);
-        console.log("Email:", emailInput.value);
+        const userInfo = {
+            name: nameInput.value,
+            email: emailInput.value
+        };
+
+        console.log(userInfo); 
+        alert("Form submitted successfully!");
     }
 });
-
-function displayError(inputElement, errorElementId, message) {
-    inputElement.classList.add('error');
-    const errorElement = document.getElementById(errorElementId);
-    errorElement.textContent = message;
-    errorElement.style.display = 'block';
-}
-
-function clearErrors() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    errorMessages.forEach(function(errorMessage) {
-        errorMessage.style.display = 'none';
-    });
-
-    const inputs = document.querySelectorAll('input');
-    inputs.forEach(function(input) {
-        input.classList.remove('error', 'success');
-    });
-}
