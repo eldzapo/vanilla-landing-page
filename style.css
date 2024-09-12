@@ -192,7 +192,6 @@ p {
 /* Top Destinations Section */
 .top-destinations {
 
-    margin: 5% 0;
     text-align: center;
     padding: 50px 0;
 
@@ -210,7 +209,6 @@ p {
     }
 
 }
-
 .destination-cards {
     display: flex;
     justify-content: center;
@@ -222,30 +220,26 @@ p {
     background-color: #fff;
     border-radius: 10px;
     filter: drop-shadow(-5px 17px 88px #00000036);
-        text-align: center;
-    width: 300px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-body {
-    margin: 10% 5%;
-
-    .offer{
-        margin-bottom: 10px;
-    }
-
-    .offer-duration{
-        img {
-            margin-right: 10px;
-        }
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .card img {
     width: 100%;
     border-radius: 10px 10px 0px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 320px;
+    height:80%;
+    object-fit: cover;
 }
 
 .card h3 {
@@ -254,24 +248,27 @@ p {
 
 .card p {
     font-size: 16px;
-    color: #666;
+    color: #5E6282;
 }
 
-.card .offer{
+.card .offer {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .card .offer-duration {
     display: flex;
+    align-items: center;
+    margin-top: 10px;
 
     img {
         height: 20px;
         width: 20px;
+        margin-right: 10px;
     }
-
 }
+
 
 /* 3 Easy Steps Section */
 .easy-steps {
@@ -297,6 +294,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center; 
+    margin-top: 150px;
 
     .small{
         position: absolute;
@@ -312,6 +310,17 @@ p {
 .step {
     padding: 20px 0;
     width: auto;
+    display: flex;
+
+    .step-description p{
+        color:#666;
+        font-weight: 300;
+        margin-left: 20px;
+    }
+
+    .step-title {
+        font-weight: 700 !important;
+    }
 }
 
 .step h3 {
