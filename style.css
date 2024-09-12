@@ -77,6 +77,8 @@ nav ul li a {
 
 .hero-content {
 
+    width: 26%;;
+
     h1 {
         font-size: 84px;
         font-weight: 700;
@@ -212,11 +214,8 @@ p {
     justify-content: center;
     gap: 5%;
     margin-top: 20px;
-    overflow-x: scroll; /* Allows scrolling both ways */
     gap: 20px;
-    scroll-snap-type: x mandatory; /* Keep scroll snapping */
-    scroll-snap-points-x: repeat(300px); /* Optional for older browsers */
-    scroll-snap-stop: always; /* Ensures smooth snapping */
+
 }
 
 .card {
@@ -309,12 +308,14 @@ p {
 .steps {
     display: flex;
     flex-direction: column;
+
 }
 
 .step {
     padding: 20px 0;
     width: auto;
     display: flex;
+    align-items: center;
 
     .step-description p{
         color:#666;
@@ -454,8 +455,8 @@ input.success {
     margin-bottom: 15px;
 }
 
-/* Media Query for iPhone 12 screens */
-@media only screen and (max-width: 425px) {
+
+@media only screen and (max-width: 1024px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -546,16 +547,15 @@ input.success {
     }
 }
 
-/* Media Query for iPhone screens */
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 1024px) {
 
     .mock-card-container {
         display: flex;
     }
     
     .mock-card-large, .mock-card-small {
-        flex: 1; /* Grow to fill container */
-        object-fit: cover; /* Optional: Ensure images maintain aspect ratio */
+        flex: 1; 
+        object-fit: cover;
     }
     
 
@@ -701,7 +701,6 @@ header {
     overflow-x: auto;
     gap: 20px; 
     padding: 20px; 
-    scroll-snap-type: x mandatory;
 }
 
 .card {
@@ -821,6 +820,16 @@ header {
     }
  }
 
-
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .step {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+    .step {
+        justify-content: center;
+    }
+}
