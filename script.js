@@ -37,3 +37,14 @@ document.getElementById('subscribeForm').addEventListener('submit', function(eve
         alert("Form submitted successfully!");
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navRight = document.getElementById('nav-right');
+
+    hamburger.addEventListener('click', function() {
+        navRight.classList.toggle('show');
+        hamburger.classList.toggle('active');
+    });
+});
