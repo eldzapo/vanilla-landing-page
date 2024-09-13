@@ -173,16 +173,13 @@ p {
 
 
 .hero-image {
-
     #travel {
-    margin-top: 0;
-    width: auto;
-    height: auto;   
-    z-index: 5; 
-    position: relative;
-    object-fit: cover;
-}
-
+        margin-top: 0;
+        width: auto;
+        height: auto;   
+        z-index: 5; 
+        object-fit: cover;  
+    }
 }
 
 #plane {
@@ -557,7 +554,11 @@ input.success {
 
     .mock-card-container {
         display: flex;
-        margin: 0px;
+        margin-top: 10px;
+    }
+
+    .form-container{
+        margin-top: 0;
     }
     
     .mock-card-large, .mock-card-small {
@@ -827,6 +828,19 @@ header {
     }
  }
 
+}
+
+@media only screen and (max-width: 375px) {
+
+        .hero-image img#travel {
+            top: 50;
+            left: 50;
+            width: 100%; /* Spread the image across the full width */
+            height: 100%; /* Ensure the image covers the full height */
+            object-fit: cover; /* Ensure the image fills the container while cropping as necessary */
+            opacity: 0.3; /* Keep opacity to match your design */
+
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
