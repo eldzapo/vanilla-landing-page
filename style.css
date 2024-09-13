@@ -23,7 +23,7 @@ button {
     padding: 10px 20px;
     background-color: transparent; 
     font-weight: 600;
-    color: #333;  
+    color: #333;
     cursor: pointer;
     border-radius: 5px; 
 }
@@ -176,10 +176,12 @@ p {
 
     #travel {
     margin-top: 0;
-    width: 765px;
-    height: auto;
+    width: auto;
+    height: auto;   
     z-index: 5; 
-    position: relative;}
+    position: relative;
+    object-fit: cover;
+}
 
 }
 
@@ -194,7 +196,6 @@ p {
     z-index: 1;
  }
 
-/* Top Destinations Section */
 .top-destinations {
 
     text-align: center;
@@ -556,6 +557,7 @@ input.success {
 
     .mock-card-container {
         display: flex;
+        margin: 0px;
     }
     
     .mock-card-large, .mock-card-small {
